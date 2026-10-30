@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>KwekDrop</AssemblyName>
+    <RootNamespace>KwekDrop</RootNamespace>
+    <Product>KwekDrop</Product>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Title>KwekDrop</Title>
+    <Description>Drag. Drop. Convert. Desktop file tools for Windows.</Description>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <RollForward>LatestMajor</RollForward>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <DefineConstants>$(DefineConstants);PACKAGED_STARTUP</DefineConstants>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>assets/kwekdrop.ico</ApplicationIcon>
+    <NoWarn>$(NoWarn);WFAC010</NoWarn>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <!-- The app has its own English and Arabic text; the other languages only add .NET framework strings for dialogs it never shows. -->
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assets/kwekdrop.ico" LogicalName="KwekDrop.AppIcon" />
+    <EmbeddedResource Include="assets/sounds/highlight.wav" LogicalName="KwekDrop.HighlightSound" />
+    <Resource Include="assets/fonts/thmanyah-sans-Regular.ttf" Condition="Exists('assets/fonts/thmanyah-sans-Regular.ttf')" />
+    <Resource Include="assets/fonts/thmanyah-sans-Medium.ttf" Condition="Exists('assets/fonts/thmanyah-sans-Medium.ttf')" />
+    <Resource Include="assets/fonts/thmanyah-sans-Bold.ttf" Condition="Exists('assets/fonts/thmanyah-sans-Bold.ttf')" />
+    <Resource Include="assets/fonts/thmanyah-sans-Light.ttf" Condition="Exists('assets/fonts/thmanyah-sans-Light.ttf')" />
+    <Resource Include="assets/fonts/thmanyah-sans-Black.ttf" Condition="Exists('assets/fonts/thmanyah-sans-Black.ttf')" />
+    <Content Include="assets/sounds/highlight.wav" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

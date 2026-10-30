@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF><UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable><ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/KwekDrop/Theme/UiTheme.cs" Link="UiTheme.cs"/>
+    <Compile Include="../../src/KwekDrop/Controls/ContinuousFrame.cs" Link="ContinuousFrame.cs"/>
+    <Compile Include="../../src/KwekDrop/Theme/WindowBlur.cs" Link="WindowBlur.cs"/>
+    <Compile Include="../../src/KwekDrop/Platform/Native.cs" Link="Native.cs"/>
+    <Compile Include="../../src/KwekDrop/Controls/RotationDial.cs" Link="RotationDial.cs"/>
+    <Compile Include="../../src/KwekDrop/Core/RotationGeometry.cs" Link="RotationGeometry.cs"/>
+    <Compile Include="../../src/KwekDrop/Theme/AppIcon.cs" Link="AppIcon.cs"/>
+    <Compile Include="../../src/KwekDrop/Localization/Strings.cs" Link="Strings.cs"/>
+    <Compile Include="../../src/KwekDrop/Localization/StringsEn.cs" Link="StringsEn.cs"/>
+    <Compile Include="../../src/KwekDrop/Localization/StringsAr.cs" Link="StringsAr.cs"/>
+    <Compile Include="../../src/KwekDrop/Core/Settings.cs" Link="Settings.cs"/>
+    <Compile Include="../../src/KwekDrop/Platform/StartupManager.cs" Link="StartupManager.cs"/>
+    <Compile Include="../../src/KwekDrop/Controls/SegmentedControl.cs" Link="SegmentedControl.cs"/>
+    <Compile Include="../../src/KwekDrop/Controls/ColorSwatchPicker.cs" Link="ColorSwatchPicker.cs"/>
+    <Compile Include="../../src/KwekDrop/Core/Qr.cs" Link="Qr.cs"/>
+    <Compile Include="../../src/KwekDrop/Core/QrRender.cs" Link="QrRender.cs"/>
+    <Compile Include="../../src/KwekDrop/Windows/QrWindow.cs" Link="QrWindow.cs"/>
+    <EmbeddedResource Include="../../src/KwekDrop/assets/kwekdrop.ico" LogicalName="KwekDrop.AppIcon"/>
+    <Resource Include="../../src/KwekDrop/assets/fonts/thmanyah-sans-Light.ttf" Link="assets/fonts/thmanyah-sans-Light.ttf" Condition="Exists('../../src/KwekDrop/assets/fonts/thmanyah-sans-Light.ttf')" />
+    <Resource Include="../../src/KwekDrop/assets/fonts/thmanyah-sans-Regular.ttf" Link="assets/fonts/thmanyah-sans-Regular.ttf" Condition="Exists('../../src/KwekDrop/assets/fonts/thmanyah-sans-Regular.ttf')" />
+    <Resource Include="../../src/KwekDrop/assets/fonts/thmanyah-sans-Medium.ttf" Link="assets/fonts/thmanyah-sans-Medium.ttf" Condition="Exists('../../src/KwekDrop/assets/fonts/thmanyah-sans-Medium.ttf')" />
+    <Resource Include="../../src/KwekDrop/assets/fonts/thmanyah-sans-Bold.ttf" Link="assets/fonts/thmanyah-sans-Bold.ttf" Condition="Exists('../../src/KwekDrop/assets/fonts/thmanyah-sans-Bold.ttf')" />
+    <Resource Include="../../src/KwekDrop/assets/fonts/thmanyah-sans-Black.ttf" Link="assets/fonts/thmanyah-sans-Black.ttf" Condition="Exists('../../src/KwekDrop/assets/fonts/thmanyah-sans-Black.ttf')" />
+  </ItemGroup>
+</Project>

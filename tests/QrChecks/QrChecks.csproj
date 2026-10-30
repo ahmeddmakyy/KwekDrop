@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/KwekDrop/Core/Qr.cs" Link="Qr.cs"/>
+    <Compile Include="../../src/KwekDrop/Core/QrRender.cs" Link="QrRender.cs"/>
+    <Compile Include="../../src/KwekDrop/Core/QrDebug.cs" Link="QrDebug.cs"/>
+  </ItemGroup>
+</Project>

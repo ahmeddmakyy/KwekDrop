@@ -1,0 +1,39 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="KwekDrop" Manufacturer="KwekDrop Team" Version="1.0.0.0" UpgradeCode="a72e819b-7c15-46f3-a3d2-314f85e13a91" Scope="perUser">
+    <MajorUpgrade DowngradeErrorMessage="A newer version of KwekDrop is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Icon Id="KwekDropIcon.ico" SourceFile="src\KwekDrop\assets\kwekdrop.ico" />
+    <Property Id="ARPPRODUCTICON" Value="KwekDropIcon.ico" />
+
+    <StandardDirectory Id="DesktopFolder">
+      <Component Id="ApplicationDesktopShortcut" Guid="f72b83a2-118e-4a62-9218-c24e6a889104">
+        <Shortcut Id="DesktopShortcut"
+                  Name="KwekDrop"
+                  Description="KwekDrop - Drag. Drop. Convert. Offline File Tools"
+                  Target="[INSTALLFOLDER]KwekDrop.exe"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="KwekDropIcon.ico" />
+        <RegistryValue Root="HKCU" Key="Software\KwekDrop" Name="DesktopShortcut" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </StandardDirectory>
+
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Component Id="ApplicationShortcut" Guid="d61d0263-d1ea-4bb3-9ee6-4e5a95350481">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="KwekDrop"
+                  Description="KwekDrop - Drag. Drop. Convert. Offline File Tools"
+                  Target="[INSTALLFOLDER]KwekDrop.exe"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="KwekDropIcon.ico" />
+        <RegistryValue Root="HKCU" Key="Software\KwekDrop" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </StandardDirectory>
+
+    <Feature Id="MainFeature" Title="KwekDrop">
+      <ComponentGroupRef Id="ProductFiles" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationDesktopShortcut" />
+    </Feature>
+  </Package>
+</Wix>

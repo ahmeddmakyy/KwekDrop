@@ -1,0 +1,42 @@
+# Build products, installers and portable runtimes
+/outputs/
+*.msi
+*.msix
+*.wixpdb
+**/bin/
+**/obj/
+**/__pycache__/
+*.py[cod]
+*.pdb
+.vs/
+.idea/
+.venv/
+venv/
+
+# Generated test data, caches, WiX components and development screenshots
+tests/_generated/
+.cache/
+tools/wix/components.wxs
+# Plan copies written by the coding assistant (local only)
+agy-delegate plans/
+
+# Local credentials and editor/system files
+.env
+.env.*
+!.env.example
+*.user
+*.suo
+Thumbs.db
+.DS_Store
+
+# Third-party material that must not be published with the source
+# (Thmanyah Sans may not be redistributed: download it from https://font.thmanyah.com and copy the five .ttf files here)
+src/KwekDrop/assets/fonts/*.ttf
+# Local working notes of the maintainer (planning notes, design references of other products, renders)
+docs/dev/
+# Dev-only link to the bundled runtime (the debug renders look for runtime/ next to the backend folder)
+src/KwekDrop/runtime
+
+# Working files for the media renders (downloaded stock clips, raw captures)
+docs/media/_work/
+tools/media/
